@@ -1,11 +1,6 @@
 streamlit>=1.32.0
-numpy>=1.24.0
 librosa>=0.10.1
+numpy>=1.24.0
+plotly>=5.18.0
 soundfile>=0.12.1
-tensorflow>=2.13.0
-tensorflow-hub>=0.14.0
-pyaudio>=0.2.13
-sounddevice>=0.4.6
 scipy>=1.11.0
-matplotlib>=3.7.0
-av>=10.0.0
