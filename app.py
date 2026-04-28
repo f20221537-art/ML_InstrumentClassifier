@@ -54,3 +54,18 @@ if ctx.audio_processor:
             st.balloons() if label == "Guitar" else None # Fun trigger
         except queue.Empty:
             break
+
+from streamlit_webrtc import webrtc_streamer, WebRtcMode, RTCConfiguration
+
+# Add this configuration
+RTC_CONFIGURATION = RTCConfiguration(
+    {"iceServers": [{"urls": ["stun:stun.l.google.com:19302"]}]}
+)
+
+ctx = webrtc_streamer(
+    key="instrument-detect",
+    mode=WebRtcMode.SENDRECV,
+    rtc_configuration=RTC_CONFIGURATION, # Add this line
+    media_stream_constraints={"audio": True, "video": False},
+    async_processing=True, # Helps with threading issues
+)
