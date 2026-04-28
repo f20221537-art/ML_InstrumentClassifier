@@ -1,0 +1,5 @@
+streamlit
+streamlit-webrtc
+librosa
+numpy
+av
